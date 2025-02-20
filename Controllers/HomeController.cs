@@ -36,7 +36,7 @@ namespace Todo.Controllers
 
         [HttpPut("/{id:int}")]
         public IActionResult Put(
-            [FromBody] int id,
+            [FromRoute] int id,
             [FromBody] TodoModel todo,
             [FromServices] AppDbContext context)
         {
